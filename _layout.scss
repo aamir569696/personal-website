@@ -1,0 +1,116 @@
+.layout {
+  display: grid;
+  grid-template-columns: 100%;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+
+/*===== Left sidebar =====*/
+.sidebar {
+  width: 320px;
+  height: 100vh;
+  color: var(--white);
+  padding: 0.5rem;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .sidebox {
+    width: 95%;
+    height: 85%;
+    border-radius: 20px;
+    padding: 0.5rem;
+    border: 1px solid var(--white);
+    box-shadow: 1px 1px 6px ;
+     background: var(--bg-color);
+
+    ul {
+      list-style: none;
+      font-size: 18px;
+      font-weight: 500;
+
+      li {
+        width: 100%;
+        padding: 1rem;
+        a {
+          color: #bdb5b5;
+          text-decoration: none;
+
+          &:active {
+            color: var(--white);
+          }
+          &:hover{
+            color: var(--white);
+            
+          }
+        }
+      }
+    }
+    .socialmedia {
+      padding: 1rem;
+      display: flex;
+      justify-content: space-around;
+      a {
+        padding: 0.5rem 0.5rem;
+        border-radius: 20%;
+        font-size: 20px;
+        color: var(--white);
+        background-color: var(--primary-color);
+        transition: all 0.3s ease ;
+
+         &:hover{
+        background-color: var(--white);
+      color: var(--primary-color);
+      }
+      &:active{
+        scale: 0.9;
+      }
+      }
+
+     
+    }
+  }
+}
+/*===== Right side website =====*/
+.content {
+  color: var(--white);
+  margin-left: 335px;
+  position: relative;
+  .hero {
+    width: 100%;
+    height: auto;
+    background-color: var(--bg-color);
+    position: relative;
+    padding: 4rem 0rem;
+    .circle1 {
+      width: 40vmin;
+      height: 40vmin;
+      @include circle();
+      right: 5rem;
+      top: 4rem;
+      z-index: 0;
+    }
+
+    .circle2 {
+      width: 180px;
+      height: 180px;
+      left: 7rem;
+      top: 20rem;
+      @include circle();
+      animation: movecircle 5s ease-in-out infinite;
+    }
+  }
+}
+@keyframes movecircle {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
