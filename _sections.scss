@@ -30,11 +30,14 @@
     .btn1 {
       @include btn();
       background-color: var(--btn-bg);
+      background-color: rebeccapurple;
+      padding: 17px 20px;
     }
     .btn2 {
       @include btn();
       color: var(--text-color);
       transition: all 0.4s ease;
+       padding: 17px 20px;
       &:hover {
         background-color: var(--btn-bg);
         color: var(--bg-color);
@@ -838,6 +841,12 @@ footer {
     height: auto;
     text-align: center;
     display: block;
+  }
+  .hero-parent .hero-left .btn1{
+    padding: 7px 10px;
+  }
+  .hero-parent .hero-left .btn2{
+    padding: 7px 10px;
   }
 }
  
